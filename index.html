@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio João Medeiros</title>
+
+    <!--link para colocar os icones da redes sociais-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--link para o css personalizado-->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- Conteúdo da página -->
+    <nav class="barra_de_navegacao">
+        <a href="#home" class="logo">Portfólio do &lt;João/&gt;</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="https://github.com/joaooliveram" target="_blank">Projetos</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Conteúdo principal -->
+    <section id="home" class="conteudo">
+        <div class="conteudo_pagina">
+            <h1>Desenvolvedor Full Stack</h1>
+            <p>Desenvolvedor Full Stack apaixonado por arquitetura de software, resolução de problemas e desempenho.</p>
+            <p class="highlight">Construindo desde interfaces dinâmicas até lógicas de Back-end robustas em C e Python</p>
+            <p>Além de dev, sou tambem amante de idiomas, falo portugês, inglês(B2 TOEFL),espanhol e aprendo alemão. Transita entre a complexidade da lógica de baixo nível e a elegância das interfaces modernas. Com experiência em Back-end (C/Python) e design Front-end, construo soluções onde a performance encontra a criatividade. Não apenas escrevo código, eu projeto sistemas que resolvem problemas e interfaces que agradam seus usuários. Se quiser conversar, clica no botão abaixo!</p>
+            <a href="https://wa.me/5582996350031" class="botao_contato" target="_blank">Vamos conversar?</a>
+        </div>
+        <div class="fotos_geral">
+            <img src="perfil.jpg" alt="foto de Perfil" class="foto_perfil">
+        </div>
+    </section>
+
+    <!-- Skills -->
+     <section id="skills" class="skills">
+        <h2>Experiência Técnica</h2>
+        <div class="grade_skills">
+            <div class="skill_card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Criação de interfaces responsivas e dinâmicas.</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill_card">
+            <i class="fa-solid fa-server"></i>
+            <h3>Construção de lógicas robustas e sistemas eficientes.</h3>
+            <p>C, Python</p>
+            </div>
+            <div class="skill_card">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h3>Prototipagem e design focado na experiência do usuário</h3>
+            <p>Design, Figma, Canva</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final -->
+     <footer>
+        <section id="contato" class="contato">
+            <h1>Formulário de Contato</h1>
+            <p>Se você tem um projeto em mente ou só quer dizer oi, manda uma mensagem para entrar em contato comigo!</p>
+            <form name="contatoform" id="contatoform" class="formulario">
+            <div>
+                <!--Falar do required e do action="" -->
+                <label for="Nome">Nome:</label>
+                <input type="text" id="Nome" name="Nome" placeholder="Escreva seu Nome" >
+
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" placeholder="Escreva seu Email" >
+
+                <label for="Mensagem">Mensagem:</label>
+                <textarea id="Mensagem" name="Mensagem" placeholder="Escreva sua Mensagem" rows="4"></textarea>
+                <button type="submit">Enviar</button>
+                </div>
+            </form>
+            
+            
+            <p>&copy; 2026 JVOM. Todos os direitos reservados.</p>
+            <div class="links_sociais">
+                <a href="https://github.com/joaooliveram" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/5582996350031" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://instagram.com/joaooliveram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://discordapp.com/users/348827055833481218" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            </section>
+        </footer>
+    </body>
+    <script src="script.js"></script>
+    </html>

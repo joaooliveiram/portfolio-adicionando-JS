@@ -1,0 +1,301 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+/* central de controle das variáveis de Cores */
+:root{
+    --cor-fundo: #111111;
+    --cor-secundaria: #080808;
+    --cor-link: #1e90ff;
+    --cor-neon: #0066ff;
+    --cor-texto: #e7e7e7;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    overflow: visible;
+}
+
+.barra_de_navegacao{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo{
+color: var(--cor-link);
+font-weight: 700;
+font-size: 2.0em;
+text-decoration: none;
+position: relative;
+padding-left: 1.5em;
+}
+
+.nav-links{
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+
+.nav-links a{
+color: var(--cor-texto);
+text-decoration: none;
+position: relative;
+transition: all 0.3s ease;
+font-weight: 500;
+}
+
+.nav-links a::after{ 
+background-color: var(--cor-neon);
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+transition: width 0.35s ease;}
+
+/* Efeito ao passar o mouse*/
+.nav-links a:hover::after{
+width: 100%;
+}
+
+/* Parte de Principal */
+.conteudo{
+display: flex;
+min-height: 100vh;
+align-items: center;
+justify-content: center;
+padding: 12% 5%;
+background: radial-gradient(circle at 74% 51%, var(--cor-neon) 0%, transparent 30%);
+}
+
+.conteudo_pagina{
+flex: 1;
+padding-right: 5rem;
+position: relative;
+}
+
+.fotos_geral{
+flex: 1;
+text-align: center;
+position: relative;
+}
+
+.foto_perfil {
+width: 600px;
+max-width: 100%;
+aspect-ratio: 1 / 1; /* Garante que a foto seja SEMPRE um quadrado */
+border-radius: 50%;
+object-fit: cover; 
+border: 3px solid var(--cor-link);
+box-shadow: 0 0 500px var(--cor-link);
+animation: float 3s ease-in-out infinite;
+filter: grayscale(0.2) contrast(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/*degrade no Título */
+.conteudo h1{
+font-size: 4em;
+margin-bottom: 1.5rem;
+background: linear-gradient(178deg, var(--cor-neon) 2%, #ffffff 80%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.conteudo p{
+font-size: 1.5em;
+margin-bottom: 2rem;
+opacity: 0.9;
+max-width: 600px;
+}
+
+.botao_contato{
+display: inline-block;
+padding: 1rem 2rem;
+background: linear-gradient(45deg, var(--cor-link), #0066ff);
+color: white;
+border-radius: 8px;
+text-decoration: none;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.botao_contato:hover{
+transform: translateY(-10px);
+border-color: var(--cor-texto);
+box-shadow: 0 0 25px var(--cor-texto);
+}
+
+/* Skills */
+.skills{
+padding: 5rem 5%;
+background: var(--cor-secundaria);
+}
+
+.grade_skills{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.skill_card{
+padding: 2rem;
+border-radius: 15px;
+background: rgba(255, 255, 255, 0.05);
+transition: all 0.3s ease;
+border: 1px solid rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(5px);
+}
+
+.skill_card:hover {
+transform: translateY(-10px);
+border-color: var(--cor-neon);
+box-shadow: 0 0 30px var(--cor-link);
+}
+
+.skill_card i{
+font-size: 2.5em;
+color: var(--cor-link);
+margin-bottom: 1rem;
+}
+
+/* Footer */
+footer{
+background: var(--cor-fundo);
+padding: 3rem 5%;
+text-align: center;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.formulario{
+width: 100%;
+max-width: 128rem;
+font-size: 1.3em;
+}
+
+.formulario label,
+.formulario input,
+.formulario textarea,
+.formulario button{
+display: block;
+width: 100%;
+}
+
+.formulario label{
+    color: var(--cor-texto);
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+}
+
+.formulario input,
+.formulario textarea{
+    font:inherit;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(45, 52, 58, 0.938);
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario textarea{
+    resize: vertical;
+    min-height: 13rem;
+}
+
+.formulario input:hover,
+.formulario input:focus,
+.formulario textarea:hover,
+.formulario textarea:focus{
+outline: none;
+border-color: var(--cor-link);
+box-shadow: 0 0 25px var(--cor-neon);
+}
+
+.formulario button{
+    display:block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--cor-neon);
+    color: white;
+    font:inherit;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.formulario button:hover{
+    transform: translateY(-5px);
+    border-color: var(--cor-link);
+    box-shadow: 0 0 10px var(--cor-texto);
+}
+
+.links_sociais{
+margin-top: 2rem;
+display: flex;
+justify-content: center;
+gap: 2rem;
+}
+
+.links_sociais a{
+color: var(--cor-texto);
+font-size: 2.2em;
+transition: all 0.3s ease;
+}
+
+.links_sociais a:hover{
+color: var(--cor-link);
+transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+.conteudo{
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.conteudo_pagina{
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.foto_perfil{
+    width: 280px;
+    height: 280px;
+}
+
+.nav-links{
+    display: none;
+}
+
+.logo{
+    font-size: 1.5em;
+}
+}
+
